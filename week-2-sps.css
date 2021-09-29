@@ -221,9 +221,9 @@ p {
 	margin-bottom: .6px;
 	width: 57%;
 	margin-left: -20%;
-	border-left: 3px solid green;
+	border-left: 3px solid var(--link-color);
 	padding-bottom: 1em;
-	border-bottom: 3px solid green;
+	border-bottom: 3px solid var(--link-color);
 	position: relative;
 	border-bottom-left-radius: 25px;
 }
@@ -238,13 +238,13 @@ h4 {
 .map-1::before {
 	content: '1';
 	position: absolute;
-	width: 2em;
-	height: 2em;
+	width: 1em;
 	background-color: var(--link-color);
-	right: 95%;
+	right: 96%;
 	border-radius: 30px;
-	padding: .5em;
+	padding: 1em;
 	text-align: center;
+	top:0%;
 }
 
 .map-2 h4,
@@ -258,11 +258,11 @@ p {
 	border-top-right-radius: 25px;
 	margin-top: -3px;
 	margin-left: 11%;
-	border-right: 3px solid green;
+	border-right: 3px solid var(--link-color);
 	padding-bottom: 1em;
-	border-top: 3px solid green;
+	border-top: 3px solid var(--link-color);
 	position: relative;
-	border-bottom: solid 3px green;
+	border-bottom: solid 3px var(--link-color);
 	border-bottom-right-radius: 25px;
 	border-bottom-left-radius: -25px;
 }
@@ -270,23 +270,22 @@ p {
 .map-2::after {
 	content: '2';
 	position: absolute;
-	width: 2em;
-	height: 2em;
+	width: 1em;
 	background-color: var(--link-color);
 	border-radius: 30px;
-	padding: .5em;
+	padding: 1em;
 	text-align: center;
 	top: 35%;
-	left: 95%;
+	left: 96%;
 }
 
 .map-3 {
 	margin-top: -2px;
 	width: 57%;
 	margin-left: -11%;
-	border-left: 3px solid green;
+	border-left: 3px solid var(--link-color);
 	padding-bottom: 1em;
-	border-top: 3px solid green;
+	border-top: 3px solid var(--link-color);
 	position: relative;
 	border-top-left-radius: 25px;
 }
@@ -295,14 +294,13 @@ p {
 	z-index: 9;
 	content: '3';
 	position: absolute;
-	width: 2em;
-	height: 2em;
+	width: 1em;
 	background-color: var(--link-color);
 	border-radius: 30px;
-	padding: .5em;
+	padding: 1em;
 	text-align: center;
 	top: 35%;
-	right: 95%;
+	right: 96%;
 }
 
 .map-3::after {
@@ -524,6 +522,12 @@ h4 {
 
 
 /* ================footer================== */
+.footer-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
 
 .footer-right-child {
 	display: flex;
@@ -531,25 +535,21 @@ h4 {
 }
 
 .footer-right-child h5 {
-	margin-top: 0%;
-	margin-left: 10%;
-	margin-bottom: 0%;
+	margin-top: 1%;
 }
 
 .footer-right p {
-	margin-left: 18%;
 	font-size: 18px;
 }
 
 footer {
-	margin-top: 20%;
 	display: flex;
 	flex-direction: column;
 	padding: 3em;
 }
 
 .footer-1 {
-	width: 100%;
+	width: 90%;
 	display: grid;
 	grid-template-columns: auto auto;
 }
@@ -566,6 +566,18 @@ footer {
 	border: 5px solid rgb(226, 226, 226)
 }
 
+
+.float-left::before {
+	content: '';
+    background-color: black;
+    width: 20px;
+    height: 29px;
+    border-radius: 45% 55% 100% 0% / 100% 54% 46% 0%;
+    position: absolute;
+    top: 84%;
+    z-index: -17;
+}
+
 .footer-left {
 	height: 30em;
 	position: relative;
@@ -577,10 +589,11 @@ footer {
 }
 
 .float-right {
+	justify-content: center;
 	z-index: 99;
 	background-color: var(--link-color);
 	float: right;
-	text-align: right;
+	text-align: left;
 	padding: .5em;
 	border-radius: 30px;
 	position: relative;
@@ -621,17 +634,6 @@ footer {
 	left: 85%;
 }
 
-.float-left::before {
-	content: '';
-	background-color: var(--background-color);
-	width: 20px;
-	height: 29px;
-	border-radius: 45% 55% 100% 0% / 100% 54% 46% 0%;
-	position: absolute;
-	top: 74%;
-	z-index: 1;
-	background-color: rgb(245, 245, 245);
-}
 
 
 /* .small-chat-right::before, */
@@ -648,12 +650,12 @@ footer {
 	transition-duration: 00ms;
 	/* transform: translateY(-10%); */
 }
-
+/* 
 .float-left:hover,
 .float-right:hover {
 	transform: translateY(10%);
 	transition-duration: 500ms;
-}
+} */
 
 .big-chat-left:hover::after,
 .small-chat-right:hover::before {
@@ -663,7 +665,7 @@ footer {
 	background-color: transparent;
 	font-size: 8px;
 	top: -40%;
-	z-index: 500;
+	z-index: -39;
 	transition-duration: 700ms;
 	transform: translateY(-10%);
 }
@@ -681,6 +683,10 @@ footer {
 
 .social-media-pannel p {
 	margin-left: 100%;
+}
+
+i{
+	cursor: pointer;
 }
 
 
@@ -753,6 +759,7 @@ footer {
 		margin: 0;
 	}
 	footer {
+		margin-left: 3%;
 		padding: 0px;
 		display: flex;
 		justify-content: center;
@@ -767,7 +774,7 @@ footer {
 	}
 	.footer-left {
 		padding: 3%;
-		width: 90%;
+		width:99%;
 	}
 	#viedo-1,
 	#viedo-2,
@@ -780,5 +787,11 @@ footer {
 	}
 	#viedo-3 {
 		margin-left: 0%;
+	}
+	#scroll-top{
+		left:78%;
+	}
+	.footer-right{
+		margin-left: 10%;
 	}
 }

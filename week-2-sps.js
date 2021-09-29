@@ -33,7 +33,7 @@ function hideImg(x){
     var toTopButton= document.getElementById("scroll-top")
        var rootScroll=document.documentElement;
        console.log(rootScroll.scrollTop)
-       if(rootScroll.scrollTop >= 1700){
+       if(rootScroll.scrollTop >= 300){
         toTopButton.style.display="block"
        }
        else{
